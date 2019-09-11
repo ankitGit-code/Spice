@@ -45,6 +45,8 @@ public class MisController {
 	private String fromdate;
 	private String todate;
 	
+	//HomePage
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -56,6 +58,7 @@ public class MisController {
 		model.addAttribute("serverTime", formattedDate);
 
 		return "index";
+		
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
